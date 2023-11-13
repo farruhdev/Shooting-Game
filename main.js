@@ -10,8 +10,8 @@ document.body.appendChild(canvas);
 let backgroundImage, spaceshipImage, bulletImage, enemyImage, gameOverImage;
 
 //spaceship coordinates
-let spaceshipX = canvas.width/2-32
-let spaceshipY = canvas.height-64
+let spaceshipX = canvas.width / 2-32;
+let spaceshipY = canvas.height - 64;
 
 
 function loadImage() {
@@ -31,6 +31,32 @@ function loadImage() {
     gameOverImage.src = "images/gameover.png";
 }
 
+let keysDown = {};
+function setupKeyboardListener() {
+    document.addEventListener("keydown", function (event) {
+        keysDown[event.keyCode] = true;
+    });
+    document.addEventListener("keyup", function (event) {
+        delete keysDown[event.keyCode];
+    });
+}
+
+function update() {
+    if (39 in keysDown) {
+        spaceshipX += 5;
+    } // right
+    if (37 in keysDown) {
+        spaceshipX -= 5;
+    } //left
+}
+
+if(spaceshipX <= 0) {
+    spaceshipX = 0;
+}
+if(spaceshipX >= canvas.width - 64) {
+    spaceshipX = canvas.width - 64;
+}
+
 function render() {
     ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
     ctx.drawImage(spaceshipImage,spaceshipX, spaceshipY);
@@ -38,10 +64,11 @@ function render() {
 }
 
 function main() {
-    render();
-    console.log("animation calls main function");
+    update(); //좌표 값을 업데이트하고
+    render(); //그려주고
     requestAnimationFrame(main);
 }
 
 loadImage();
+setupKeyboardListener();
 main();
