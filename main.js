@@ -26,6 +26,10 @@ function Bullet() {
     };
     this.update = function () {
         this.y -= 7;
+        // 캔버스 상단을 벗어났는지 확인
+        if(this.y < 0) {
+            this.alive = false; // 캔버스를 벗어난 총알을 '죽은' 상태로 설정
+        }
     };
 
     this.checkHit=function () {
