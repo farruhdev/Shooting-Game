@@ -18,3 +18,10 @@ Press the spacebar to shoot bullets.
 Avoid letting enemies reach the bottom of the screen.
 The game ends when an enemy passes your defenses.
 
+![Screenshot_1](https://github.com/farruhdev/Shooting-Game/assets/115518263/db85693d-d1a8-4f42-af1a-eaa3d5842461)
+
+
+
+
+https://github.com/farruhdev/Shooting-Game/assets/115518263/49c5602e-647e-41fc-8186-f0c0da89db90
+
