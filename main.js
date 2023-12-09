@@ -65,7 +65,7 @@ function Enemy() {
         enemyList.push(this);
     };
     this.update = function () {
-        this.y +=3; // 적군의 속도 조절
+        this.y +=2;    // 적군의 속도 조절
 
         if (this.y >= canvas.height - 48) {
             gameOver = true;
@@ -73,7 +73,6 @@ function Enemy() {
         }
     };
 }
-
 
 
 function loadImage() {
@@ -186,14 +185,11 @@ function main() {
    
 }
 
+
+
+
 loadImage();
 setupKeyboardListener();
 createEnemy();
 main();
 
-//총알만들기
-//1. 스페이스바를 누르면 총알 발사
-//2. 총알 발사 = 총알의 y값이 -- 총알의 x값은? 스페이스를 누른 순간의 우주선의 x좌표
-//3. 발사된 총알들은 총알 배열에 저장을 한다.
-//4. 총알들은 x,y좌표값은 있어야 한다.
-//5. 총알 배열을 가지고 render 그려준다
