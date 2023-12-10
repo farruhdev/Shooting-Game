@@ -17,7 +17,7 @@ Move your spaceship using the left and right arrow keys.
 Press the spacebar to shoot bullets.
 Avoid letting enemies reach the bottom of the screen.
 The game ends when an enemy passes your defenses.
-##Reference
+## Reference
 https://www.youtube.com/
 
 ![Screenshot_1](https://github.com/farruhdev/Shooting-Game/assets/115518263/db85693d-d1a8-4f42-af1a-eaa3d5842461)
